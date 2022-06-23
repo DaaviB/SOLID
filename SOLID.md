@@ -3,7 +3,7 @@
 ## *SOLID* é um acrônimo de um conjunto de princípios da programação orientada a objeto.
 
 - ### **SRP** : ***Single Responsability Principle (Princípio da Responsabilidade Única):***
-    - Uma classe deve ter um, e apenas um, motivo para ser modificada.
+    - "Uma classe deve ter um, e apenas um, motivo para ser modificada."
     ---
     ***Aqui temos um exemplo de uma violação do primeiro princípio.***
     ```python
@@ -93,7 +93,7 @@
     ---
     ---
 - ### **OCP** : ***Open/Closed Principle (Princípio Aberto/Fechado):***
-    - Entidades de softwares (classes, módulos, funcões, etc.) devem estar abertas para extensões, mas fechadas para modificações.
+    - "Entidades de softwares (classes, módulos, funcões, etc.) devem estar abertas para extensões, mas fechadas para modificações."
     ---
 
     ***Violação do OCP:***
@@ -147,7 +147,36 @@
    
    ---
    ---
-- **LSP** : ***Liskov Substitution Principle***
+- ## **LSP** : ***Liskov Substitution Principle (Princípio da Substituição de Liskov):***
+  - "Se q(x) é uma propriedade desmonstrável dos objetos x de tipo T. Então q(y) deve ser verdadeiro para objetos de Tipo S, onde S é um subtipo de T."
+  - " Uma classe base deve poder ser substituída pela sua class derivada." 
+ 
+---
+  ***Violação do LSP:***
+ ```python
+ class Retangulo    
+    def area(self, altura, largura):
+        return (altura * largura)
+
+class Quadrado(Retangulo):
+    def area(self, altura, largura):
+        largura = altura
+        return (largura * altura)
+
+ ```
+
+ Acima temos a classe Retangulo tem um método que calcula a aréa, e temos a classe Quadrado, que herda de Retangulo por ter o mesmo calcúlo para a aréa, porém, ele sobrescreve o método **area**. Igualando altura e largura.
+ 
+ Portanto, ao substituir a classe base Retangulo, o calcúlo para a área de um retangulo não seria mais correto.
+
+ Pra deixar claro, vamos supor que passamos
+ 5 para altura e 10 para largura. Quadrado agora substitui a sua classe base.
+
+O retorno desse calcúlo para o Retangulo deveria
+ser 50, porém, ele irá retornar 25.
+
+
+   
 - **ISP** : ***Interface Principle***
 - **DIP** : ***Principle***
 
