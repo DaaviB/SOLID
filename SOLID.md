@@ -96,7 +96,7 @@
     - Entidades de softwares (classes, módulos, funcões, etc.) devem estar abertas para extensões, mas fechadas para modificações.
     ---
 
-    ***Violação do OCP:**
+    ***Violação do OCP:***
    ```python
    class DebitoConta:
         def debitar(valor, conta, tipo_conta):
