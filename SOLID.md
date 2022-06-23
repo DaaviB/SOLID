@@ -143,10 +143,10 @@
    ---
    No exemplo, temos a classe abstrata DebitoConta, e temos o método abstrato debitar. Para adicionarmos um novo tipo de conta, criamos uma classe DebitoContaCorrente que herda de DebitoConta , e sobrescrevemos o método debitar.
 
-   Com isso seguimos o princípio ***OCP***.
-
-
-
+   Assim conseguimos adicionar um novo tipo de conta, sem ferir o OCP.
+   
+   ---
+   ---
 - **LSP** : ***Liskov Substitution Principle***
 - **ISP** : ***Interface Principle***
 - **DIP** : ***Principle***
