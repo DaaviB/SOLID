@@ -68,7 +68,7 @@
     ***Obs: O método adicionar_cliente não precisa conhecer o banco de dados, ou seja, ele não precisa fazer a conexão com o banco, ele deve apenas inserir o cliente ao banco***
 
     ---
-    Temos a classe ClienteService, essa irá cadastrar o cliente.
+    E por último, temos a classe ClienteService, essa classe irá cadastrar o cliente.
     A classe terá o método ***adicionar_cliente***,
     esse método terá e responsabilidade de cadastrar o cliente
 
@@ -106,10 +106,10 @@
                 ...
     ```
     - TipoConta é um Enum.
-    - Supondo que temos um novo tipo de conta, teriamos que modificar a classe, adicionando outro if e támbem teriamos que modificr a classe enum para adicionar um novo valor.
+    - Supondo que temos um novo tipo de conta, teriamos que modificar a classe, adicionando outra validação para o novo tipo e támbem teriamos que modificr a classe **Enum** para adicionar um novo valor.
 
     ---
-    Para solucionar esse problema criaremos uma classe abstrata.
+    Para solucionar esse problema, criaremos uma classe abstrata.
 
    ```python
    from abc import ABC, abstractmethod
@@ -140,6 +140,11 @@
     DebitoContaCorrente().debitar(1.2, 'Corrente')
 
    ```
+   ---
+   No exemplo, temos a classe abstrata DebitoConta, e temos o método abstrato debitar. Para adicionarmos um novo tipo de conta, criamos uma classe DebitoContaCorrente que herda de DebitoConta , e sobrescrevemos o método debitar.
+
+   Com isso seguimos o princípio ***OCP***.
+
 
 
 - **LSP** : ***Liskov Substitution Principle***
