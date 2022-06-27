@@ -430,7 +430,7 @@ if __name__ = '__main__':
 
 
 ### Conclusão
-***O uso dos princípios SOLID irá melhorar à escrita do seu código, manutenção e também ajudará outros devs que irão ler seu código e, entender como ele funciona, e assim poder implementar algo mais facilmente.***
+***O uso dos princípios SOLID irá melhorar à escrita do seu código, manutenção e também ajudará outros devs que irão ler seu código, à entender como ele funciona, e assim poder implementar algo mais facilmente.***
 
 
 ***Nota: Tudo acima foi escrito durante meu aprendizado, pode haver erros ortográficos ou até mesmos nos códigos de exemplos. Caso note algum erro, entre em contato comigo para que eu possa corrigir.***
